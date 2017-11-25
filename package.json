@@ -1,0 +1,29 @@
+{
+  "name": "discord-counting",
+  "version": "1.0.0",
+  "description": "counting channel moderation bot for discordapp",
+  "main": "src/index.js",
+  "dependencies": {
+    "eris": "^0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgebyrom/discord-counting.git"
+  },
+  "keywords": [
+    "counting",
+    "discord",
+    "bot",
+    "eris"
+  ],
+  "author": "rinixx#9013",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgebyrom/discord-counting/issues"
+  },
+  "homepage": "https://github.com/georgebyrom/discord-counting#readme"
+}
