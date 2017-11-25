@@ -8,6 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,7 +27,4 @@
     "url": "https://github.com/georgebyrom/discord-counting/issues"
   },
   "homepage": "https://github.com/georgebyrom/discord-counting#readme"
-}
-"scripts": {
-  "start": "node src/index.js"
 }
