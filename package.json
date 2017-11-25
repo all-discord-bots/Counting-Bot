@@ -27,3 +27,6 @@
   },
   "homepage": "https://github.com/georgebyrom/discord-counting#readme"
 }
+"scripts": {
+  "start": "node src/index.js"
+}
