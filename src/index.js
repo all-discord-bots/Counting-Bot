@@ -20,7 +20,7 @@ bot.on("messageCreate", (msg) => {
         bot.createMessage(msg.channel.id, 'Pinging...').then(sent => {
 			    sent.edit(`**Pong!** \nMy latency is \`${sent.timestamp - msg.timestamp}ms\`.`);
 		    })
-    };
+    }; // End of ping commands
 
     // main module ---
     if(msg.channel.id != (config.channel)) {
@@ -29,13 +29,13 @@ bot.on("messageCreate", (msg) => {
     } else {
       var newCount = (counter + 1);
 
-      if (msg.content != newCount) {
+      if (msg.content < newCount || msg.content > newCount || msg.content < 0) {
         msg.delete("Auto-removed wrong or non-related message in counting channel.");
 
-      } else if (msg.author.id === lastCountUser) {
+      }/* else if (msg.author.id === lastCountUser) {
         msg.delete("Auto-removed user's double message in counting channel.");
 
-      } else {
+      } */else {
         counter = newCount;
         lastCountUser = msg.author.id;
       }
