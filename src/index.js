@@ -29,7 +29,7 @@ bot.on("messageCreate", (msg) => {
     } else {
       var newCount = (counter + 1);
 
-      if (msg.content < newCount || msg.content > newCount || msg.content < 0 || msg.content !== newCount) {
+      if (msg.content < newCount || msg.content > newCount || msg.content < 0 || isNaN(msg.content)) {
         msg.delete("Auto-removed wrong or non-related message in counting channel.");
 
       }/* else if (msg.author.id === lastCountUser) {
