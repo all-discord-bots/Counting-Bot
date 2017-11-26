@@ -4,7 +4,8 @@
   "description": "counting channel moderation bot for discordapp",
   "main": "src/index.js",
   "dependencies": {
-    "eris": "^0.7.1"
+    "eris": "^0.7.1",
+    "fs": "^0.0.1"
   },
   "devDependencies": {},
   "scripts": {
