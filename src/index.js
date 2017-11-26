@@ -15,6 +15,8 @@ bot.on("ready", () => {
 	bot.editStatus("online", { name: "1 2 3...", type: 0 });
 });
 
+bot.on('disconnected', () => console.warn('Counting bot disconnected'));
+
 bot.on("messageCreate", (msg) => {
 	//let cantcount = msg.guild.roles.get("384107437998735363");
 	if (msg.author.bot) return;
