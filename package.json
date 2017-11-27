@@ -21,10 +21,6 @@
     "bot",
     "eris"
   ],
-  "author": "rinixx#9013",
+  "author": "BannerBomb#9772",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/georgebyrom/discord-counting/issues"
-  },
-  "homepage": "https://github.com/georgebyrom/discord-counting#readme"
 }
