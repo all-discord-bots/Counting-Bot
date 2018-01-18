@@ -23,7 +23,7 @@ bot.on("messageCreate", (msg) => {
 	  var newcounter = gRole.name;
 		if (msg.content == newcounter) {
 			newcounter++;
-			gRole.name = newcounter; // + 1
+			gRole.name = "testCOnt"; //newcounter; // + 1
 		//	fs.writeFile("./count.json", JSON.stringify(count), (err) => {
 		//	if (err) {
 		//		console.error(err);
