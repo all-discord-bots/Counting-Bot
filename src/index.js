@@ -19,7 +19,7 @@ bot.on("messageCreate", (msg) => {
 	//let cantcount = msg.guild.roles.get("384107437998735363");
 	if (msg.author.bot) return;
 	if (msg.channel.id == (config.channel)) {
-	  let gRole = message.guild.roles.get("403427612103278593");
+	  let gRole = msg.guild.roles.get("403427612103278593");
 	  var newcounter = gRole.name;
 		if (msg.content == newcounter) {
 			newcounter++;
