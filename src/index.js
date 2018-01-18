@@ -7,23 +7,23 @@ var bot = new Eris(config.token);
 let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
 
 var counter = count["count"];
-let lastNum;
+let newNum;
 
 bot.on("ready", () => {
-bot.getChannelLogs("Counting", 1, function(err, logs) {
-  if (!err) {
-    //do stuff with logs
-lastNum = logs.content;
-newNum = lastNum + 1
-  } else {
-    console.log("Error getting logs: ", err)
-  }
-});
-
 	console.log("Ready to moderate counting!");
 	console.log("Logged in as " + bot.user.username + "#" + bot.user.discriminator + ".");
 	
 	bot.editStatus("online", { name: "1 2 3...", type: 0 });
+});
+
+bot.getChannelLogs("counting", 1, function(err, logs) {
+  if (!err) {
+    //do stuff with logs
+var lastNum = logs.content;
+newNum = lastNum + 1;
+  } else {
+    console.log("Error getting logs: ", err)
+  }
 });
 
 bot.on("messageCreate", (msg) => {
