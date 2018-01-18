@@ -7,8 +7,19 @@ var bot = new Eris(config.token);
 let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
 
 var counter = count["count"];
+let lastNum;
 
 bot.on("ready", () => {
+bot.getChannelLogs("Counting", 1, function(err, logs) {
+  if (!err) {
+    //do stuff with logs
+lastNum = logs.content;
+newNum = lastNum + 1
+  } else {
+    console.log("Error getting logs: ", err)
+  }
+});
+
 	console.log("Ready to moderate counting!");
 	console.log("Logged in as " + bot.user.username + "#" + bot.user.discriminator + ".");
 	
@@ -19,11 +30,11 @@ bot.on("messageCreate", (msg) => {
 	//let cantcount = msg.guild.roles.get("384107437998735363");
 	if (msg.author.bot) return;
 	if (msg.channel.id == (config.channel)) {
-	  let gRole = msg.channel.guild.roles.get("403427612103278593");
-	  var newcounter = gRole.name;
+	  //let gRole = msg.channel.guild.roles.get("403427612103278593");
+	  var newcounter = newNum;
 		if (msg.content == newcounter) {
 			newcounter++;
-			gRole.name = newcounter; // + 1
+			//gRole.name = newcounter; // + 1
 		//	fs.writeFile("./count.json", JSON.stringify(count), (err) => {
 		//	if (err) {
 		//		console.error(err);
